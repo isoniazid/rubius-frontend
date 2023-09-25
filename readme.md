@@ -1,0 +1,2 @@
+# Rubius-frontend
+- Vasya Ryzhkov
