@@ -1,0 +1,86 @@
+.about {
+    /* background-color: bisque; */
+    padding-top: 100px;
+    padding-left: 166px;
+    width: 1109px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 80px;
+}
+
+.about-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.about-text-wrapper {
+    /* background-color: aqua; */
+    width: 539px;
+}
+
+.about-text-wrapper h1 {
+    padding-top: 0px;
+    margin-top: 0px;
+    font-size: 48px;
+    font-weight: 700;
+    color: #333333;
+}
+
+.intro {
+    line-height: 32px;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.subp {
+    line-height: 26px;
+    font-size: 16px;
+}
+
+.video-img {
+    width: 445px;
+    height: 296px;
+    padding-left: 94px;
+    padding-top: 105px;
+}
+
+.about-highlights {
+    display: flex;
+    flex-direction: row;
+    /* background-color: blueviolet; */
+    padding-top: 100px;
+}
+
+.pic-n-text 
+{
+    width: 350px;
+    display: flex;
+    /* background-color: chartreuse; */
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+.pic-n-text img
+{
+    margin-bottom: 28px;
+}
+
+.pic-n-text h2
+{
+    margin-top: 0px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.pic-n-text p
+{
+    line-height: 22px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 296px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+}
