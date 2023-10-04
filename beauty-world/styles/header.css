@@ -1,0 +1,139 @@
+.header-wrapper
+{
+    padding-top: 14px;
+    padding-left: 165px;
+    width:1110px;
+    /* background-color: aqua; */
+}
+
+.top-wrapper
+{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.top-wrapper h1
+{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+nav
+{
+    padding-left: 136px;
+    /* background-color: bisque; */
+}
+
+nav ul
+{
+    padding-left: 0px;
+    font-size: 14px;
+    font-weight: 500;
+   display: flex;
+   flex-direction: row;
+   gap: 28px;
+   list-style-type: none;
+}
+
+.contact-wrapper
+{
+    padding-left: 139px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact-wrapper h2
+{
+    text-align: right;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 0%;
+}
+
+.contact-wrapper p
+{
+    padding: 0%;
+    margin-top: 0%;
+    text-align: right;
+    font-weight: 400;
+    font-size: 11px;
+}
+
+.short-description
+{
+    padding-top: 75px;
+    width:540px;
+}
+
+.short-description h2
+{
+    line-height: 59px;
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+.short-description p
+{
+    padding-top: 17px;
+    margin: 0px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.social-networks
+{
+    position: absolute;
+    top: 237px;
+    left: 1245px;
+}
+
+.social-networks ul
+{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+   flex-direction: column;
+   gap: 18px;
+   list-style-type: none;
+}
+
+.girl
+{
+    position: absolute;
+    top: 81px;
+    left: 658px;
+}
+
+.header-button
+{
+    margin-top: 59px;
+    width: 203px;
+    height: 48px;
+    background: #FB9475;
+    border-radius: 24px;
+    border: none;
+    color: white;
+    font-weight: 500px;
+    font-size: 14px;
+    transition: 1s;
+}
+
+.header-button:hover
+{
+    background-color:#333333;
+}
+
+header a 
+{
+    transition: color 0.3s; 
+}
+
+header a:hover
+{
+    
+    color:#00BF78;
+}

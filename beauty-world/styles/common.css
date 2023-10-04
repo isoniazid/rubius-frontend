@@ -1,0 +1,23 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+body {
+    margin: 0%;
+    background-color: white;
+}
+
+header {
+    height: 591px;
+    background: url("../img/background.svg");
+    background-size: contain;
+    background-blend-mode: difference;
+}
+
+a {
+    color: #333333;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+}
