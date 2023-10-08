@@ -1,0 +1,71 @@
+.masters {
+    background: #F8F6F7;
+    height: 697px;
+}
+
+.masters__description {
+    color: #333333;
+    font-weight: 400;
+    font-size: 16px;
+    padding-bottom: 24px;
+}
+
+
+.master-cards-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.content-container__header__for-masters {
+    padding-top: 80px;
+}
+
+
+
+.master-card__img {
+    width: 255px;
+    transition: filter 1s;
+}
+
+.master-card__img:hover {
+    filter: brightness(60%);
+}
+
+.master-card__description {
+    font-size: 14px;
+    font-weight: 400;
+    padding-bottom: 20px;
+}
+
+.master-card h3 {
+    font-size: 18px;
+    color: #333333;
+    font-weight: 600;
+    padding-bottom: 8px;
+}
+
+.master-card__experience {
+    font-size: 12px;
+    color: #333333;
+    font-weight: 300;
+    font-variant: small-caps;
+}
+
+
+/*не успел допилить*/
+/* .master-card__img__onhover {
+    position: relative;
+    display: inline-block;
+}
+
+.master-card__img__onhover:hover::before {
+    content: "Текст";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+} */
