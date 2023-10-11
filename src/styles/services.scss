@@ -1,0 +1,70 @@
+.content-container__for-services {
+    padding-bottom: 100px;
+}
+
+
+.services__horizontal-list {
+    padding-left: 0%;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    gap: 28px;
+}
+
+.services__horizontal-list a {
+    text-decoration: none;
+    color: #333333;
+    transition: color 0.3s;
+}
+
+.services__horizontal-list a:hover {
+    color: #00BF78;
+}
+
+.name-n-price {
+    padding-top: 47px;
+    padding-left: 0%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 32px;
+    list-style-type: none;
+    max-height: 304px;
+
+}
+
+.name-n-price__element {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+}
+
+.name-n-price__info h4 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #333333;
+}
+
+.name-n-price__info p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #333333;
+
+
+}
+
+.name-n-price__price {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: right;
+    color: #00BF78;
+
+}

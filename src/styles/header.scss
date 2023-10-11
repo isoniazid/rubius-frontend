@@ -1,0 +1,249 @@
+.header {
+    background-image: url("../img/background.svg");
+    background-size: cover;
+    display: flex;
+    width: 100%;
+    height: 591px;
+    justify-content: center;
+}
+
+.content-container__for-header {
+    align-items: center;
+    padding-top: 30px;
+    flex-direction: column;
+    max-width: 1438px;
+}
+
+.header__top {
+    display: flex;
+    flex-direction: row;
+    gap: 137px;
+    height: 45px;
+}
+
+.header__nav ul {
+    list-style-type: none;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    gap: 28px;
+
+}
+
+.header__nav a {
+    text-decoration: none;
+    color: #333333;
+    transition: color 0.3s;
+}
+
+.header__nav a:hover {
+    color: #00BF78;
+
+}
+
+.header__girl {
+    position: relative;
+    width: 524px;
+    left: 44%;
+    top: -380px;
+}
+
+.header__logo {
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.header__content {
+    padding-top: 120px;
+    gap: 540px;
+    display: flex;
+    flex-direction: row;
+}
+
+.header__hero {
+    display: flex;
+    flex-direction: column;
+}
+
+.header__hero h2 {
+    max-width: 540px;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 59px;
+    padding-bottom: 0px;
+}
+
+.header__hero p {
+    padding-top: 17px;
+    font-weight: 400;
+    font-size: 20px;
+    padding-bottom: 59px;
+}
+
+.header__hero button {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    background: #FB9475;
+    border: none;
+    height: 48px;
+    width: 203px;
+    border-radius: 24px;
+    outline: none;
+    transition: background 1s;
+}
+
+.header__hero button:hover {
+    background: #333333;
+}
+
+.header__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333333;
+}
+
+.header__phone-number {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.header__schedule {
+    font-size: 11px;
+    font-weight: 400;
+}
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1280px) {
+    .content-container__for-header {
+        align-items: center;
+        padding-top: 30px;
+        flex-direction: column;
+        max-width: 768px;
+    }
+
+    .header__girl {
+        position: relative;
+        width: 524px;
+        left: 44%;
+        top: -490px;
+    }
+
+    .header__content {
+        padding-top: 30px;
+        gap: 540px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .header__phone-number {
+        white-space: nowrap;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .header__top {
+        display: flex;
+        flex-direction: row;
+        gap: 80px;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+
+    .header {
+        background-clip: border-box;
+        background-repeat: repeat;
+        background-size: cover;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .content-container__for-header {
+        align-items: center;
+        padding-top: 30px;
+        flex-direction: column;
+        max-width: 680px;
+    }
+
+    .header__top {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+    }
+
+    /*  .header__girl {
+        position: relative;
+        width: 524px;
+        left: 44%;
+        top: -490px;
+    }
+
+    .header__content {
+        padding-top: 30px;
+        gap: 540px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .header__phone-number {
+        white-space: nowrap;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .header__top {
+        display: flex;
+        flex-direction: row;
+        gap: 80px;
+    } */
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+    .header {
+        background-clip: border-box;
+        background-repeat: repeat;
+        background-size: cover;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .content-container__for-header {
+        align-items: center;
+        padding-top: 30px;
+        flex-direction: column;
+        max-width: 680px;
+    }
+
+    .header__top {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .header__content {
+        padding-top: 120px;
+        gap: 300px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .header__girl {
+        position: relative;
+        width: 524px;
+        left: 44%;
+        top: -440px;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {}

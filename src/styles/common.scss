@@ -1,0 +1,70 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    margin: 0%;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+main {
+    width: 100%;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Стандартный контейнер для всех секций */
+.content-container {
+    flex-direction: column;
+    width: 1110px;
+    display: flex;
+}
+
+.button {
+    color: white;
+    font-weight: 500;
+    background: #FB9475;
+    border: none;
+    border-radius: 24px;
+    outline: none;
+    transition: background 1s;
+}
+
+.button__big {
+
+    font-size: 14px;
+
+    height: 48px;
+    width: 203px;
+
+}
+
+.button__small {
+    font-size: 12px;
+    height: 34px;
+    width: 112px;
+}
+
+.button:hover {
+    background: #333333;
+}
+
+
+
+.content-container__header {
+    color: #333333;
+    font-size: 48px;
+    font-weight: 700;
+    padding-bottom: 32px;
+}
