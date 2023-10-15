@@ -6,6 +6,7 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const sourcemaps = require('gulp-sourcemaps');
+const concat = require('gulp-concat');
 
 function buildSass() {
     return src('src/styles/**/*.scss')
@@ -20,9 +21,10 @@ function buildSass() {
                 cssnano()
             ])
         )
+        .pipe(concat('styles.css'))
         .pipe(sourcemaps.write())
-        .pipe(dest('src/compiled-styles'))
-        .pipe(dest('dist/compiled-styles'))
+        .pipe(dest('src/compiled-styles/'))
+        .pipe(dest('dist/compiled-styles/'))
         .pipe(browserSync.stream());
 }
 
