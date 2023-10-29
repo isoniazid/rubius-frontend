@@ -116,6 +116,12 @@
                 outline: none;
                 transition: background 1s;
             }
+
+            button:hover {
+
+                background: black;
+
+            }
         }
 
         .right-part__conditions {

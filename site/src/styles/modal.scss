@@ -1,0 +1,25 @@
+.modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        padding-top: 10px;
+
+    }
+}
+
+.modal-form {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+
+
+    .button {
+        align-self: center;
+        margin-top: 20px;
+        width: 200px;
+        height: 50px;
+    }
+}

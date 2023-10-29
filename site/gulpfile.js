@@ -7,9 +7,22 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const sourcemaps = require('gulp-sourcemaps');
 const concat = require('gulp-concat');
+const webpackStream = require('webpack-stream');
+const rename = require('gulp-rename');
+
+
+function buildJS() {
+    return src('src/js/index.js')
+        .pipe(webpackStream(require('./webpack.config')))
+        .pipe(rename('main.min.js'))
+        .pipe(dest('src/js'))
+        .pipe(dest('dist/js'))
+        .pipe(browserSync.stream());
+}
+
 
 function buildSass() {
-    return src('src/styles/**/*.scss')
+    return src('src/styles/styles.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({ includePaths: ['./node_modules'] }).on('error', sass.logError))
         .pipe(
@@ -21,7 +34,6 @@ function buildSass() {
                 cssnano()
             ])
         )
-        .pipe(concat('styles.css'))
         .pipe(sourcemaps.write())
         .pipe(dest('src/compiled-styles/'))
         .pipe(dest('dist/compiled-styles/'))
@@ -47,6 +59,7 @@ function clearDist() {
 function serve() {
     watch('src/styles/**/*.scss', buildSass);
     watch('src/**/*.html', buildHtml);
+    watch(['src/**/*.js', '!src/js/**/*.min.js'], buildJS);
 }
 
 function createDevServer() {
@@ -58,5 +71,5 @@ function createDevServer() {
     )
 }
 
-exports.build = series(clearDist, buildSass, buildHtml, copy);
-exports.default = series(buildSass, parallel(createDevServer, serve));
+exports.build = series(clearDist, buildSass, buildJS, buildHtml, copy);
+exports.default = series(series(buildSass, buildJS), parallel(createDevServer, serve));

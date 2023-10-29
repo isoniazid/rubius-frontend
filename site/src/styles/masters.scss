@@ -24,18 +24,45 @@
 
 
 .master-card__img {
+    transition: 1s;
     width: 255px;
-    transition: filter 1s;
 }
 
-.master-card__img:hover {
-    filter: brightness(60%);
+
+.master-card a:hover {
+
+    cursor: pointer;
+
+    .master-card__text {
+
+        color: white;
+    }
+
+    .master-card__img {
+        filter: brightness(60%);
+    }
 }
 
 .master-card__description {
     font-size: 14px;
     font-weight: 400;
     padding-bottom: 20px;
+}
+
+.master-card a {
+
+    position: relative;
+    display: inline-block
+}
+
+.master-card__text {
+    transition: 1s;
+    z-index: 100;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    color: transparent;
 }
 
 .master-card h3 {

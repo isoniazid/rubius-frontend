@@ -14,10 +14,54 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-
+    <link rel="stylesheet" href="./plugins/hystModal-0.4/dist/hystmodal.min.css">
 </head>
 
 <body>
+    <script src="./js/main.min.js">
+    </script>
+
+    <div class="hystmodal" id="submit-modal" aria-hidden="true">
+        <div class="hystmodal__wrap">
+            <div class="hystmodal__window hystmodal__window--form" role="dialog" aria-modal="true">
+                <button data-hystclose class="hystmodal__close">Закрыть</button>
+                <div class="modal">
+                    <h1>Записаться</h1>
+                    <form class="modal-form" action="http://localhost:3001/api/orders" method="POST">
+                        <label>Ваше имя</label>
+                        <input type="text" name="name" placeholder="Ваше имя">
+                        <label>Номер телефона</label>
+                        <input type="phone" name="phone" placeholder="+7 (___) ___-__-__">
+                        <label>Выберите мастера</label>
+                        <select name="masterId">
+                            <option value="1">Краснова Ирина</option>
+                            <option value="2">Камилова Жанна</option>
+                            <option value="3">Киселева Алина</option>
+                            <option value="4">Иванова Елена</option>
+                            <option value="5">Быстров Евгений</option>
+                        </select>
+                        <label>Выберите услугу</label>
+                        <select name="serviceId">
+                            <option value="1">Женская стрижка</option>
+                            <option value="2">Мужская стрижка</option>
+                            <option value="3">Детский стиль</option>
+                            <option value="4">Креативный стиль</option>
+                            <option value="5">Стрижка бороды и усов</option>
+                            <option value="6">Экспресс укладка</option>
+                            <option value="7">Укладка дневная</option>
+                            <option value="8">Прическа вечерняя (свадебная)</option>
+                        </select>
+                        <label>Дата визита</label>
+                        <input name="visitDate" type="date"></input>
+                        <button type="submit" class="button" id="bigFormSubmit">Записаться</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
     <header class="header">
         <div class="content-contaitner content-container__for-header">
             <div class="header__top">
@@ -35,6 +79,7 @@
                     <p class="header__phone-number">8 (499) 686-17-62</p>
                     <p class="header__schedule">с 10.00 до 19.00 без выходных</p>
                 </div>
+                <!-- <a href="#" data-hystmodal="#myModal">Показать окно с id=myModal</a> -->
             </div>
 
             <div class="header__content">
@@ -43,7 +88,7 @@
                         <h2>Создай свой образ вместе с нами</h2>
                         <p>Идеальный образ за 60 минут</p>
                     </div>
-                    <button class="button button__big">Записаться онлайн</button>
+                    <button class="button button__big" data-hystmodal="#submit-modal">Записаться онлайн</button>
                 </div>
                 <div class="header__social">
                 </div>
@@ -98,27 +143,27 @@
                         <img class="popular-card__img" src="img/nogotochki.png" alt="nogotochki">
                         <h3>Маникюр</h3>
                         <p class="popular-card__description">Аппаратный, комбинированный или классический.</p>
-                        <button class="button button__small">Записаться</button>
+                        <button class="button button__small" data-hystmodal="#submit-modal">Записаться</button>
                     </div>
                     <div class="popular-card">
                         <img class="popular-card__img" src="img/nogotochki.png" alt="nogotochki">
                         <h3>Покрытие гель-лак</h3>
                         <p class="popular-card__description">Гель-лак наносится в несколько слоев с использование базы и
                             топа. Каждый слой полимеризуется в LED-лампе.</p>
-                        <button class="button button__small">Записаться</button>
+                        <button class="button button__small" data-hystmodal="#submit-modal">Записаться</button>
                     </div>
                     <div class="popular-card">
                         <img class="popular-card__img" src="img/nogotochki.png" alt="nogotochki">
                         <h3>Бразильский маникюр</h3>
                         <p class="popular-card__description">Выполняется в одноразовых перчатках наполненных увлажняющим
                             лосьоном.</p>
-                        <button class="button button__small">Записаться</button>
+                        <button class="button button__small" data-hystmodal="#submit-modal">Записаться</button>
                     </div>
                     <div class="popular-card">
                         <img class="popular-card__img" src="img/nogotochki.png" alt="nogotochki">
                         <h3>Педикюр</h3>
                         <p class="popular-card__description">Аппаратный, комбинированный или классический.</p>
-                        <button class="button button__small">Записаться</button>
+                        <button class="button button__small" data-hystmodal="#submit-modal">Записаться</button>
                     </div>
                     <div class="popular-card">
                         <img class="popular-card__img" src="img/nogotochki.png" alt="nogotochki">
@@ -126,7 +171,7 @@
                         <p class="popular-card__description">Благодаря этой процедуре увлажнение кожи увеличивается на
                             80%, также выводит токсины и укрепляет суставы.
                         </p>
-                        <button class="button button__small">Записаться</button>
+                        <button class="button button__small" data-hystmodal="#submit-modal">Записаться</button>
                     </div>
                 </div>
             </div>
@@ -225,25 +270,34 @@
                 <h2 class="content-container__header content-container__header__for-masters">Мастера</h2>
                 <p class="masters__description">Дружная команда настоящих профессионалов</p>
                 <div class="master-cards-container">
-                    <div class="master-card"><a href="#"><img class="master-card__img" src="img/ira.png" alt="ira"></a>
+                    <div class="master-card"><a data-hystmodal="#submit-modal">
+                            <p class="master-card__text">Записаться к мастеру</p><img class="master-card__img"
+                                src="img/ira.png" alt="ira">
+                        </a>
                         <h3>Краснова Ирина</h3>
                         <p class="master-card__description">Мастер ногтевого сервиса</p>
                         <p class="master-card__experience">опыт работы 5 лет</p>
                     </div>
-                    <div class="master-card"><a href="#"><img class="master-card__img" src="img//zhanna.png"
-                                alt="zhanna"></a>
+                    <div class="master-card"><a data-hystmodal="#submit-modal">
+                            <p class="master-card__text">Записаться к мастеру</p><img class="master-card__img"
+                                src="img//zhanna.png" alt="zhanna">
+                        </a>
                         <h3>Камилова Жанна</h3>
                         <p class="master-card__description">Визажист-стилист</p>
                         <p class="master-card__experience">опыт работы 5 лет</p>
                     </div>
-                    <div class="master-card"><a href="#"><img class="master-card__img" src="img/alina.png"
-                                alt="alina"></a>
+                    <div class="master-card"><a data-hystmodal="#submit-modal">
+                            <p class="master-card__text">Записаться к мастеру</p><img class="master-card__img"
+                                src="img/alina.png" alt="alina">
+                        </a>
                         <h3>Киселева Алина</h3>
                         <p class="master-card__description">Парикмахер</p>
                         <p class="master-card__experience">опыт работы 5 лет</p>
                     </div>
-                    <div class="master-card"><a href="#"><img class="master-card__img" src="img/lena.png"
-                                alt="lena"></a>
+                    <div class="master-card"><a data-hystmodal="#submit-modal">
+                            <p class="master-card__text">Записаться к мастеру</p><img class="master-card__img"
+                                src="img/lena.png" alt="lena">
+                        </a>
                         <h3>Иванова Елена</h3>
                         <p class="master-card__description">Мастер ногтевого сервиса</p>
                         <p class="master-card__experience">опыт работы 5 лет</p>
@@ -312,7 +366,7 @@
                         </p>
                         <input type="text" placeholder="Ваше имя">
                         <input type="phone" placeholder="+7 (___) ___-__-__">
-                        <button type="submit">Записаться</button>
+                        <button class="button" type="submit">Записаться</button>
                         <p class="right-part__conditions">
                             Нажимая на кнопку вы соглашаетесь с <a href="">обработкой персональных данных</a>
                         </p>
