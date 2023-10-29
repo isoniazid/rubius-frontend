@@ -1,0 +1,80 @@
+.our-work {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.mover-block {
+    padding-bottom: 52px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    h2 {
+        padding-top: 0;
+        font-weight: 700;
+        font-size: 48px;
+        color: #333333;
+    }
+
+    .mover-buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+    }
+
+    button {
+        cursor: pointer;
+        border-width: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        background: white;
+        transition: 0.5s;
+    }
+
+    button:hover {
+        background: #F8F6F7;
+        border-width: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+    }
+}
+
+.work-cards-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 29px;
+    justify-content: space-around;
+}
+
+.brand-container {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+
+    h4 {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #333333;
+        padding-bottom: 40px;
+    }
+
+    .brand-container__img-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
