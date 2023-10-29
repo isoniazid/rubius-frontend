@@ -40,6 +40,8 @@
   "dependencies": {
     "bootbox": "^6.0.0",
     "hystmodal": "^1.0.1",
-    "tingle.js": "^0.16.0"
+    "tingle.js": "^0.16.0",
+    "validate-js": "^2.0.1",
+    "validate.js": "^0.13.1"
   }
 }
