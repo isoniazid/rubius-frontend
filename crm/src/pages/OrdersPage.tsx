@@ -47,9 +47,31 @@ export const OrdersPage = () => {
     const [currentOrder, setOrder] = useState<IOrder | null>(null);
     useEffect(fetchOrders, [])
 
+    const [sortType, setSort] = useState(0);
 
+    const sortTyped = (array: IOrder[]) => {
+        switch (sortType) {
+            case 0:
+                return array.sort((a, b) => new Date(a.visitDate).getTime() - new Date(a.visitDate).getTime());
+            case 1:
+                return array.sort((a, b) => a.status.localeCompare(b.status))
+            default:
+                return array.sort((a, b) => a.customer.fullName.localeCompare(b.customer.fullName));
+        }
+    }
 
     return (<>
+        <Dropdown>
+            <Dropdown.Toggle variant="success" id="dropdown-basic">
+                Сортировка
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu>
+                <Dropdown.Item onClick={() => setSort(0)}>По дате</Dropdown.Item>
+                <Dropdown.Item onClick={() => setSort(1)}>По статусу</Dropdown.Item>
+                <Dropdown.Item onClick={() => setSort(2)}>По ФИО</Dropdown.Item>
+            </Dropdown.Menu>
+        </Dropdown>
         <EditModal show={showEdit}
             initialMaster={currentOrder?.master}
             initialService={currentOrder?.service}
@@ -70,7 +92,7 @@ export const OrdersPage = () => {
                     <td></td>
                 </tr></thead>
             <tbody>
-                {orders.sort((a, b) => a.id - b.id).map(order =>
+                {sortTyped(orders).map(order =>
                     <tr key={order.id}>
                         <td>{order.id}</td>
                         <td>{order.service.name}</td>
